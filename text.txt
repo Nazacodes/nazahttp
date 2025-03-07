@@ -18,3 +18,20 @@ request.cpp file
 -- putting stuff in a class public section you all  access from outside of the  class .
 -- private class is used to encaspulate the data
 
+-- std::map the map object is stored on the stack but the items themself ars save to the heap
+
+
+-- local objects like "Request req" are stored on the stack
+    -- fast allocation and deallocation
+    -- lifetime is limited to the scope of where its declared. object gets destroyed when a scope is ended.
+
+
+
+-- dynamic objects are stored to the heap
+    -- more flexable than stack but slower
+    -- must be managed mannually and deallocated using delete
+    -- objects can outlive the scope
+
+-- :: in c++ is called the scope resulution operator. it lets me disugues ambiguous  names and access to specific elements in my code
+
+
