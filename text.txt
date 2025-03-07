@@ -1,0 +1,20 @@
+what ive learnt:
+
+
+request.cpp file
+-- std is the standard keyword that is safer to use than ta regular string arrays
+-- using & references to stuff. for example using string& in my request file , instead of making a copy of the file the string& is  just referencing the file.
+-- when we do std::string it the object which includes some pointers and metadata to the stack and the accual characters to the heap.
+    -- why? : we can use the faster stack memeory to access the location of the string faster while saving the string to the heap allows for it to be more dynamic.
+    --why? : saving string to the heap is more effient as it reduces the risk of memeory leaks or buffer overflows
+-- bool is used for stuff like validate as its either valid or not so we need 2 outcomes
+-- bool is a primative data type
+              -- primative data type: is build into the language (int float char bool double void)
+                                                -- whats a void: it is a data type that is s special keyword indication absent of data
+                                                -- void* pointer : allows you to hold any data type can be typecast to any data type point
+                                                                -- what is typecasting: turning one  data type to another data type
+--bool is saved on the stack most of the time. if apart of a data class or array it will be saved on the heap.
+
+-- putting stuff in a class public section you all  access from outside of the  class .
+-- private class is used to encaspulate the data
+
