@@ -47,6 +47,7 @@ bool Request::parse(const std::string& rawRequest){
           value = value.substr(start , end-start+1);
         }
         // stores http headers in a map
+        // maps are stored on the stack whole the objects are stored on the heap
         headers[key] = value;
       }
     }
@@ -58,4 +59,32 @@ bool Request::parse(const std::string& rawRequest){
     }
     return true;
 }
+
+
+
+std::string Request::getHeaderValue(const std::string& headerName) const {
+  auto it = headers.find(headerName);
+  if (it != headers.end()) {
+    return it->second;
+  }
+  return "lol"; // Return empty string if header not found
+}
+bool Request::validate() const {
+  // Example validation: ensure method and version are not empty
+  return !method.empty() && !version.empty();
+}
+
+
+
+std::string Request::toString() const {
+  std::ostringstream ss;
+  ss << method << " " << uri << " " << version << "\n";
+  for (const auto& header : headers) {
+    ss << header.first << ": " << header.second << "\n";
+  }
+  ss << "\n" << body;
+  return ss.str();
+}
+
+
 
