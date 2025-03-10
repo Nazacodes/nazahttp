@@ -18,7 +18,9 @@ public:
   // this is use to access the http header within the other headers in the request
   // public acess as we need the header value from outside of the class
   std::string getHeaderValue(const std::string& headerName) const;
-
+  //parser to parse raw http data to readable data
+  //public access because the overall class needs to be able to parse the data into headers body and requestlines
+  bool parse(const std::string& headerName);
   // method to vallidate the overall request
   // public acess because we need the vaidate answer outside of our class for oother methods
   bool validate() const;
