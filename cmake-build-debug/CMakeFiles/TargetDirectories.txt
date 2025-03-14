@@ -1,0 +1,4 @@
+C:/Users/cogwudiegwu/Documents/GitHub/nazahttp/cmake-build-debug/CMakeFiles/nazahttp.dir
+C:/Users/cogwudiegwu/Documents/GitHub/nazahttp/cmake-build-debug/CMakeFiles/server_client.dir
+C:/Users/cogwudiegwu/Documents/GitHub/nazahttp/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/cogwudiegwu/Documents/GitHub/nazahttp/cmake-build-debug/CMakeFiles/rebuild_cache.dir

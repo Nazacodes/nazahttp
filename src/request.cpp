@@ -1,4 +1,4 @@
-#include "Request.h"
+#include "request.h"
 #include <string>
 #include <map>
 #include <iostream>
@@ -43,7 +43,7 @@ bool Request::parse(const std::string& rawRequest){
         size_t end = value.find_last_not_of("\t");
         // Check if both start and end are valid
         if(start != std::string::npos && end != std::string::npos){
-          // if both start and end are valid return the sub string of starting and start and ending at end+1 to be inclused for the end.
+          // if both start and end are valid return the sub string of starting and start and ending at end+3 to be inclused for the end.
           value = value.substr(start , end-start+1);
         }
         // stores http headers in a map
